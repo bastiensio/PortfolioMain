@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="icon" href="./files/image/logo/favicon.png" />
+
+	<meta name="description" content="Portfolio de Braas Bastien">
+	<meta name="author" content="Bastien">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Portfolio - Bastien Braas</title>
+
+
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/109bf0926b.js" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="./files/animate.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="./files/base.css">
+	<link rel="stylesheet" type="text/css" href="./files/style.css">
+
+
+	<link rel="stylesheet" type="text/css" href="./files/master.css">
+
+</head>
+
+<style>
+	.cardPara {
+		text-decoration: none;
+		display: block;
+
+		width: 100%;
+		max-width: 300px;
+		height: 175px;
+		margin-right: 60px;
+
+		line-height: 200px;
+		text-align: center;
+
+
+		color: black;
+		font-size: 2em;
+
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform: perspective(500px);
+		transform: perspective(500px);
+		margin-bottom: 75px;
+	}
+
+	.cardPara>span {
+		position: relative;
+		display: block;
+		-webkit-transform: translateZ(50px) scale(0.7);
+		transform: translateZ(50px) scale(0.7);
+	}
+
+	.cardPara>span:after {
+		position: absolute;
+		color: rgb(0, 0, 0);
+		font-size: 26px;
+		top: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		opacity: 0.8;
+
+		transition: 0.3s ease all;
+	}
+
+	.cardPara>span:before {
+		content: "Voir plus";
+		position: absolute;
+		color: rgb(0, 0, 0);
+		font-size: 26px;
+		top: 36px;
+		left: 50%;
+		transform: translateX(-50%) translateY(-10px);
+
+		opacity: 0;
+
+		display: inline-block;
+		width: 100%;
+		transition: 0.3s ease all;
+	}
+
+
+	.cardPara:hover>span:after {
+		opacity: 0;
+		transform: translateX(-50%) translateY(10px);
+	}
+
+	.cardPara:hover>span:before {
+		opacity: 0.8;
+		transform: translateX(-50%);
+	}
+
+	.cardPara>span>span {
+		display: block;
+		font-size: 20px;
+	}
+
+	.cardPara:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #333;
+		box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.404), 0 50px 100px 0 rgba(51, 51, 51, 0.062);
+		z-index: -1;
+		-webkit-transform: translateZ(-50px);
+		transform: translateZ(-50px);
+		-webkit-transition: .3s;
+		transition: .3s;
+	}
+
+	.cardParaBlanc {
+		text-decoration: none;
+		display: block;
+
+		width: 100%;
+		max-width: 300px;
+		height: 175px;
+		margin-right: 60px;
+
+		line-height: 200px;
+		text-align: center;
+
+
+		color: rgb(255, 255, 255);
+		font-size: 2em;
+
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform: perspective(500px);
+		transform: perspective(500px);
+		margin-bottom: 75px;
+	}
+
+	.cardParaBlanc>span {
+		position: relative;
+		display: block;
+		-webkit-transform: translateZ(50px) scale(0.7);
+		transform: translateZ(50px) scale(0.7);
+	}
+
+	.cardParaBlanc>span:after {
+		position: absolute;
+		color: rgb(255, 255, 255);
+		font-size: 26px;
+		top: 36px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		opacity: 0.8;
+
+		transition: 0.3s ease all;
+	}
+
+	.cardParaBlanc>span:before {
+		content: "Voir plus";
+		position: absolute;
+		color: rgb(255, 255, 255);
+		font-size: 26px;
+		top: 36px;
+		left: 50%;
+		transform: translateX(-50%) translateY(-10px);
+
+		opacity: 0;
+
+		display: inline-block;
+		width: 100%;
+		transition: 0.3s ease all;
+	}
+
+
+	.cardParaBlanc:hover>span:after {
+		opacity: 0;
+		transform: translateX(-50%) translateY(10px);
+	}
+
+	.cardParaBlanc:hover>span:before {
+		opacity: 0.8;
+		transform: translateX(-50%);
+	}
+
+	.cardParaBlanc>span>span {
+		display: block;
+		font-size: 20px;
+	}
+
+	.cardParaBlanc:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #333;
+		box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.404), 0 50px 100px 0 rgba(51, 51, 51, 0.062);
+		z-index: -1;
+		-webkit-transform: translateZ(-50px);
+		transform: translateZ(-50px);
+		-webkit-transition: .3s;
+		transition: .3s;
+	}
+</style>
+
+<body class="vsc-initialized">
+
+
+	<div class="all_wrap" data-magic-cursor="" data-color="crimson">
+		<div class="mobile_menu">
+			<div class="mobile_menu_inner">
+				<div class="container">
+					<div class="mobile_in">
+						<div class="logo">
+							<a href="index.html"><img src="./files/image/logo/logo_blanc.png" alt=""></a>
+						</div>
+						<div class="my_trigger">
+							<div class="hamburger hamburger--collapse-r">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<div class="container">
+					<div class="dropdown_inner">
+						<ul class="anchor_nav">
+							<li class="current"><a href="index.html">Accueil</a>
+							</li>
+							<li class=""><a href="index.html#presentation">A propos</a>
+							</li>
+							<li class=""><a href="index.html#projets">Projets</a>
+							</li>
+							<li><a href="index.html#competences">Compétence</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="leftpart">
+			<div class="inner">
+
+
+				<!--Menu sur le côté gauche-->
+				<div class="menu scrollable" style="height: 505px; overflow: hidden; outline: none;" tabindex="5000">
+					<ul class="anchor_nav">
+						<li class="current"><a href="index.html#accueil">Accueil</a>
+						</li>
+						<li class=""><a href="index.html#presentation">A propos</a>
+						</li>
+						<li class=""><a href="index.html#projets">Projets</a>
+						</li>
+						<li><a href="index.html#competences">Compétence</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--Bouton social en bas du menu-->
+				<div class="bottom">
+					<div class="social">
+						<ul>
+							<li><a href="https://www.linkedin.com/in/bastien-braas-933178227/"><svg
+										xmlns="https://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24"
+										height="512" viewBox="0 0 24 24" width="512" class="svg replaced-svg">
+										<path
+											d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z">
+										</path>
+									</svg></a></li>
+							<li><a href="https://github.com/bastiensio?tab=repositories">
+									<svg xmlns="https://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24"
+										class="svg replaced-svg" width="512" height="512" viewBox="0 0 24 24">
+										<path
+											d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+									</svg>
+								</a>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="rightpart index">
+			<div class="accueil" id="accueil">
+				<img src="./files/image/img.jpg" alt="logo" class="logoPage">
+				<span class="underlogo">Bastien Braas</span>
+			</div>
+
+			<div class="presentation" id="presentation">
+				<h1 class="titlePage">Qui suis-je ?</h1>
+
+				<span class="quisuisjetext">
+					Je m'appelle Bastien Braas et je suis actuellement en BTS Service Informatique au Organisation option Solutions Logicielles et Applications Métiers. 
+					J'ai eu mon baccalauréat sciences et technologies de l'industrie et du développement durable (STI2D) Option : Système d'Information et Numérique (SIN) avec la mention "bien".  
+					Pour ces deux dîplome, j'ai été accueilli dans le lycée Louis Armand à Nogent-sur-Marne.
+				</span>
+
+			</div>
+
+
+
+			<div class="realisations" id="projets">
+				<div class="transitiondiv rightone"></div>
+				<div class="container">
+					<h1 class="title white">Mes projets</h1>
+
+					<h2 class="titlereal">Mes projets réaliser au cour de ma formation</h2>
+
+
+
+					<div class="webreal">
+						<a href="resanet.html" class="cardPara resanet" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Résanet</span>
+						</a>
+
+						<a href="gsb-frais.html" class="cardPara gsb-frais" id="cardPara" data-tilt
+							data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Gsb-Frais</span>
+						</a>
+						<a href="gsb-rv.html" class="cardPara gsb-rv" id="cardPara" data-tilt
+							data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Gsb-Rv</span>
+						</a>
+						<a href="sbatelier.html" class="cardPara sbatelier" id="cardPara" data-tilt
+							data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>sbatelier</span>
+						</a>
+
+					</div>
+
+					<h2 class="titlereal">Projets réaliser durant mes stages</h2>
+					<div class="webreal">
+						<a href="stage1.html" class="cardParaBlanc stage1" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Premier stage </span>
+						</a>
+						<a href="stage2.html" class="cardParaBlanc stage2" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Second stage</span>
+						</a>
+					</div>
+
+					<h2 class="titlereal">Veille informationnelle</h2>
+					<div class="webreal">
+						<a href="Veille.html" class="cardPara Veille" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Veille</span>
+						</a>
+
+					</div>
+
+					<h2 class="titlereal">Projets personnels</h2>
+					<div class="webreal">
+						<a href="azul.html" class="cardPara azul" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Azul</span>
+						</a>
+
+						<a href="Vatican.html" class="cardParaBlanc vatican" id="cardPara" data-tilt data-tilt-glare="true"
+							data-tilt-max-glare="0.2" data-tilt-speed="400" data-tilt-scale="1.1"
+							data-tilt-perspective="500" data-tilt-max="15" data-tilt-scale="1.1">
+							<span>Site Vatican</span>
+						</a>						
+					</div>
+
+				</div>
+				<div class="transitiondiv leftone"></div>
+			</div>
+
+			<div class="competences" id="competences">
+				<h1 class="title" style="margin-left:10px; display: table;">Mes compétences</h1>
+
+				<span><b>Langages de programmation :</b></span>
+				<div class="skill-wrap copy wow bounceIn ">
+					<div class="skill-leftColumn">
+						<div class="skill-container ">
+							<img class="skill-img" src="files/image/logo/programmation/python.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">Python <span class="skill-percentage-number">70%</span></div>
+								<div class="skill-bar">
+									<div class="skill-percentage-70 html-css"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-container">
+							<img class="skill-img" src="files/image/logo/programmation/java.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">Java <span class="skill-percentage-number">65%</span></div>
+
+								<div class="skill-bar">
+									<div class="skill-percentage-65 html-css"></div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="skill-container">
+							<img class="skill-img" src="files/image/logo/programmation/html.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">HTML/CSS <span class="skill-percentage-number">60%</span></div>
+								<div class="skill-bar">
+									<div class="skill-percentage-60 html-css"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="skill-rightColumn">
+						<div class="skill-container">
+							<img class="skill-img" src="files/image/logo/programmation/php.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">PHP <span class="skill-percentage-number">70%</span></div>
+								<div class="skill-bar">
+									<div class="skill-percentage-70 html-css"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-container">
+							<img class="skill-img" src="files/image/logo/programmation/sql.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">Sql <span class="skill-percentage-number">60%</span></div>
+								<div class="skill-bar">
+									<div class="skill-percentage-60 html-css"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-container">
+							<img class="skill-img" src="files/image/logo/programmation/javascipt.png" alt="HTML/CSS Icon">
+							<div class="skill-info">
+								<div class="skill-name">Javascipt <span class="skill-percentage-number">50%</span></div>
+								<div class="skill-bar">
+									<div class="skill-percentage-50 html-css"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="other">
+					<span><b>Autres compétences : </b></span>
+					<ul class="logoComp">
+						<li class="copy wow bounceIn comp">
+							<img src="./files/image/logo/autre/mysql.png" title="MySQL" height="50vw">
+						</li>
+
+						<li class="copy wow bounceIn comp">
+							<img src="./files/image/logo/autre/postgresql.png" title="PostgreSQL" height="50vw">
+						</li>
+
+						<li class="copy wow bounceIn comp">
+							<img src="./files/image/logo/autre/github.png" title="Github" height="50px">
+						</li>
+
+						<li class="copy wow bounceIn comp ">
+							<img src="./files/image/logo/autre/vscode.png" title="Visual Studio Code" height="50px">
+						</li>
+
+						<li class="copy wow bounceIn comp ">
+							<img src="./files/image/logo/autre/eclipse.png" title="Eclipse" height="50px">
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="contact" id="contact">
+				<h1 class="title">Contactez-moi</h1>
+				<div style="margin-left: 50px;">
+					<div class="contact-item" style="margin-top: 40px;">
+						<div class="contact-text">
+							<h4 class="contact-title">Adresse <i class="fas fa-map-marker-alt"></i></h4>
+							<p  class="contact-title">Île-de-France, France</p>
+						</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-text">
+							<h4 class="contact-title">Email <i class="fas fa-envelope"></i></h4>
+							<p class="contact-title">bastien.braas.sio@gmail.com </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<div class="section">
+			<div class="copyright">
+				<div class="container">
+					<div class="inner">
+						<div class="copy wow fadeInLeft" data-wow-duration="1.5s"
+							style="visibility: hidden; animation-duration: 1.5s; animation-name: none;">
+							<p>Made by Bastien</p>
+						</div>
+						<div class="social wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s"
+							style="visibility: hidden; animation-duration: 1.5s; animation-delay: 0.2s; animation-name: none;">
+							<ul>
+
+								<!--Icon footer (thanks to iconmonstr)-->
+								<li><a href="https://www.linkedin.com/in/bastien-braas-933178227/"><svg
+											xmlns="https://www.w3.org/2000/svg" id="Bold"
+											enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24"
+											width="512" class="svg replaced-svg">
+											<path
+												d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z">
+											</path>
+										</svg></a></li>
+								<li><a href="https://github.com/bastiensio?tab=repositories">
+										<svg xmlns="https://www.w3.org/2000/svg" id="Bold"
+											enable-background="new 0 0 24 24" class="svg replaced-svg" width="512"
+											height="512" viewBox="0 0 24 24">
+											<path
+												d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	</div>
+
+
+	<div class="mouse-cursor cursor-outer" style="visibility: visible; transform: translate(302px, 6px);"></div>
+	<div class="mouse-cursor cursor-inner" style="visibility: visible; transform: translate(302px, 6px);"></div>
+
+	</div>
+
+
+	<script src="./files/jquery.js"></script>
+	<script src="./files/plugins.js"></script>
+	<script src="./files/init.js"></script>
+
+	<script src="vanilla-tilt.js/dist/vanilla-tilt.js"></script>
+
+
+
+</body>
+
+</html>
